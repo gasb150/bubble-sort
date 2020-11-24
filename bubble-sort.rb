@@ -1,17 +1,27 @@
 def bubble_sort(array)
-  numbers=array
-  n=numbers.length
-  a=numbers[0]
-  b=numbers[1]
-  i=0
-  while i<n do
-    if a > b
-      b=a
-    end    
-    a=numbers[i]
-    puts b
-    i+=1
+  n = array.length
+  if n<=1
+    return array
   end
+
+  pass = 0
+  isSorted = false
+  while pass<n do
+    isSorted = true
+    step = 1
+    while step<n do
+      if array[step-1]>array[step]
+        array[step-1], array[step] = array[step], array[step-1]
+        isSorted = false
+      end
+      step +=1
+    end
+    if isSorted
+      return array
+    end
+    pass +=1
+  end
+  array
 end
 
-bubble_sort([4,3,78,2,0,2])
+p bubble_sort([4,3,78,2,0,2])
