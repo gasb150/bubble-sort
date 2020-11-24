@@ -1,6 +1,7 @@
 def bubble_sort(array)
   n = array.length
   return array if n <= 1
+  
   pass = 0
   while pass < n
     step = 1
@@ -17,7 +18,8 @@ p bubble_sort([4, 3, 78, 2, 0, 2])
 
 def bubble_sort_by(array)
   n = array.length
-  return array if n <= 1  
+  return array if n <= 1
+
   pass = 0
   while pass < n
     step = 1
