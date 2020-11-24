@@ -9,7 +9,7 @@ def bubble_sort(array)
   while pass<n do
     isSorted = true
     step = 1
-    while step<n do
+    while step<(n-pass) do
       if array[step-1]>array[step]
         array[step-1], array[step] = array[step], array[step-1]
         isSorted = false
